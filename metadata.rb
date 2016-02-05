@@ -7,3 +7,4 @@ long_description 'Installs/Configures awesome_customers_ubuntu'
 version '0.1.0'
 
 depends 'apt', '~> 2.9.2'
+depends 'firewall', '~> 2.4.0'
