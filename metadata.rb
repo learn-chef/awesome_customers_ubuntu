@@ -8,3 +8,4 @@ version '0.1.0'
 
 depends 'apt', '~> 2.9.2'
 depends 'firewall', '~> 2.4.0'
+depends 'httpd', '~> 0.3.4'
