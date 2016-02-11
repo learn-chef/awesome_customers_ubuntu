@@ -1,0 +1,25 @@
+---
+driver:
+  name: vagrant
+  network:
+    - ["private_network", {ip: "192.168.34.34"}]
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      customize:
+        memory: 256
+
+suites:
+  - name: default
+    data_bags_path: "../../data_bags"
+    run_list:
+      - recipe[awesome_customers_ubuntu::default]
+    provisioner:
+      encrypted_data_bag_secret_key_path: "../../.chef/encrypted_data_bag_secret"
+    attributes:
+      awesome_customers_ubuntu:
+        secret_file: '/tmp/kitchen/encrypted_data_bag_secret'
