@@ -33,19 +33,6 @@ mysql_database node['awesome_customers_ubuntu']['database']['dbname'] do
 end
 
 # Add a database user.
-mysql_database_user 'db_admin' do
-  connection(
-    :host => '127.0.0.1',
-    :username => 'root',
-    :password => 'mysql_root_password'
-  )
-  password 'mysql_admin_password'
-  database_name 'my_company'
-  host '127.0.0.1'
-  action [:create, :grant]
-end
-
-# Add a database user.
 mysql_database_user node['awesome_customers_ubuntu']['database']['admin_username'] do
   connection(
     :host => node['awesome_customers_ubuntu']['database']['host'],
