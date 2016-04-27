@@ -18,7 +18,7 @@
 <?php
 $servername = "<%= node['awesome_customers_ubuntu']['database']['host'] %>";
 $username = "<%= node['awesome_customers_ubuntu']['database']['admin_username'] %>";
-$password = "<%= @database_password %>";
+$password = "<%= node['awesome_customers_ubuntu']['database']['admin_password'] %>";
 $dbname = "<%= node['awesome_customers_ubuntu']['database']['dbname'] %>";
 
 // Create connection
