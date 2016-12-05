@@ -1,5 +1,5 @@
 CREATE TABLE customers(
-  id CHAR (32) NOT NULL,
+  id CHAR (36) NOT NULL,
   PRIMARY KEY(id),
   first_name VARCHAR(64),
   last_name VARCHAR(64),
